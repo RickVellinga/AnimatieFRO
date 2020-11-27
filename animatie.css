@@ -49,9 +49,67 @@ nav{
     transform: translateX(0);
 }
 
+
 .nav__link:hover{
     color: seashell;
     background-color: skyblue;
+}
+
+.nav__link--schuif-in .nav__tekst{
+    animation: ijl-na 2s forwards;
+}
+
+@keyframes ijl-na {
+    0%{
+        transform: translateX(-2em);
+    }
+    50%{
+        transform: translateX(0.6em);
+    }
+    75%{
+        transform: translateX(-0.3em);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+
+@media screen and (min-width: 685px){
+    .nav{
+        flex-direction: row;
+        width: 100vw;
+    }
+    .nav__item{
+        margin-left: .1em;
+        flex: 1 0 auto;
+        margin-top: 0;
+    }
+    .nav__link{
+        transform: translateY(-2em);
+    }
+    .nav__link--schuif-in{
+        transform: translateX(0);
+    }
+    .nav__link--schuif-in .nav__tekst{
+        animation: ijl-na-vert 2s forwards;
+    }
+
+    @keyframes ijl-na-vert {
+        0%{
+            transform: translateY(-1em);
+        }
+        50%{
+            transform: translateY(0.1em);
+        }
+        75%{
+            transform: translateY(-0.05em);
+        }
+        100%{
+            transform: translateY(0);
+        }
+    }
+   
 }
 
 main{
